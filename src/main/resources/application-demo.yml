@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: @spring.profiles.active@
+
+server:
+  port: 5000
+
+app:
+  datasource:
+    jdbc-url: jdbc:postgresql://reactandspringbootdb.c4mp1epuhyzk.eu-west-2.rds.amazonaws.com:5432/karolinedemo
+    username: karoliad
+    password: Hjerteknuser1989
+    pool-size: 30
