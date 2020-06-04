@@ -20,10 +20,12 @@ public class StudentController {
         this.studentService = studentService;
     }
 
+
     @GetMapping
     public List<Student> getAllStudents(){
          return studentService.getAllStudents();
     }
+
 
     @GetMapping(path="{studentId}/courses")
     public List<StudentCourse> getAllCoursesForStudents(@PathVariable("studentId") UUID studentId){
@@ -31,6 +33,8 @@ public class StudentController {
 
         return studentService.getAllCoursesForStudent(studentId);
     }
+
+
     //siden dette er entry point for objektet fra front end, er det her man bør gjøre valideringen her
     @PostMapping
     public void addNewStudent(@RequestBody @Valid Student student){

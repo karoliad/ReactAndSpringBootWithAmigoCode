@@ -37,7 +37,7 @@
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>6.0.13.Final</version>
+            <version>6.1.5.Final</version>
         </dependency>
         <dependency>
             <groupId>org.assertj</groupId>
@@ -67,7 +67,6 @@
             <artifactId>frontend-maven-plugin</artifactId>
             <version>${frontend-maven-plugin.version}</version>
         </dependency>
-
     </dependencies>
 
     <profiles>
@@ -147,6 +146,11 @@
                     </plugin>
                 </plugins>
             </build>
+            <properties>
+                <spring.profiles.active>
+                    demo
+                </spring.profiles.active>
+            </properties>
         </profile>
     </profiles>
     <build>
@@ -157,7 +161,6 @@
             </plugin>
         </plugins>
     </build>
-
     <repositories>
         <repository>
             <id>spring-milestones</id>
