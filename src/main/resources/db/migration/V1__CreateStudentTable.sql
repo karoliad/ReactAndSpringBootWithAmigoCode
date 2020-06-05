@@ -4,12 +4,6 @@ CREATE TABLE IF NOT EXISTS student (
     last_name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
     gender VARCHAR(6) NOT NULL
-        CHECK (
-            gender = 'MALE'   OR
-            gender = 'male'   OR
-            gender = 'FEMALE' OR
-            gender = 'female'
-        )
 );
 
 insert into student (student_id, first_name, last_name, email, gender) values ('49c3f09c-8f5a-4ef8-9f35-c0c2becb4866', 'Stavros', 'Antrum', 'santrum0@reuters.com', 'MALE');
